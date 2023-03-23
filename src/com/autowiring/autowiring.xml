@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean class="com.autowiring.EmployeeDetails" name="empD">
+		<property name="name" value="Shaikh Sohel"></property>
+		<property name="id" value="3010"></property>
+		<property name="skills" value="Java DEveloper"></property>
+		<property name="experience" value="1 Year experience"></property>
+		
+	</bean>
+	
+	<bean class="com.autowiring.CompanyDetails" id="cmp" autowire="byName">
+		<property name="companyName" value="Techweaver"></property>
+	</bean>
+</beans>
